@@ -1,0 +1,105 @@
+.social-container {
+	text-align: center;
+	padding: 50px 0;
+	position: relative;
+	overflow: hidden !important;
+}
+
+.container__social {
+	max-width: 1450px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.social-title {
+	text-align: left;
+	color: #fff;
+	margin-top: 100px;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.social-image {
+	position: absolute;
+}
+
+.social-icon {
+	transition: transform 0.6s ease;
+	animation: pulse 2.5s infinite;
+}
+
+.social-icon:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.social-image-graph {
+	position: relative;
+	z-index: 1;
+}
+
+.social-image-git {
+	top: 32%;
+	left: 30%;
+	z-index: 2;
+}
+
+.social-image-email {
+	top: 73%;
+	left: 31.5%;
+	z-index: 2;
+}
+
+.social-image-stack {
+	top: 60%;
+	left: 74%;
+	z-index: 2;
+}
+
+.social-image-tg {
+	top: 76%;
+	left: 41.5%;
+	z-index: 2;
+}
+
+@media (max-width: 768px) {
+	.social-title {
+		text-align: center;
+	}
+	.social-image-graph {
+		width: 80%;
+		top: 50px;
+	}
+	.social-image-git {
+		width: 10%;
+		top: 50%;
+		left: 20%;
+	}
+	.social-image-email {
+		top: 87%;
+		width: 8%;
+		left: 22%;
+	}
+	.social-image-stack {
+		top: 75%;
+		width: 8%;
+		left: 85%;
+	}
+	.social-image-tg {
+		top: 90%;
+		width: 8%;
+		left: 36%;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

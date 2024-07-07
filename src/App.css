@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: #fff;
+	user-select: none;
 }
 
 body {
@@ -15,6 +16,14 @@ ol,
 ul {
 	list-style: none;
 }
+
+/*img {
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}*/
+
+
 .container {
 	max-width: 1450px;
 	margin: 30px auto;

@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-scroll'
+import { useTranslation } from 'react-i18next'
 import './Header.css'
-import './HeaderResponsive.css';
-import globeIcon from '../img/Globe.png'
-import languageIcon from '../img/Language.png'
+import './HeaderResponsive.css'
 
 const Header = () => {
+	const { t, i18n } = useTranslation()
+	const [dropdownVisible, setDropdownVisible] = useState(false)
+	const [currentLang, setCurrentLang] = useState('EN')
+
+	const changeLanguage = (lng, label) => {
+		i18n.changeLanguage(lng)
+		setCurrentLang(label)
+		setDropdownVisible(false)
+	}
+
+	const toggleDropdown = () => {
+		setDropdownVisible(!dropdownVisible)
+	}
+
 	return (
 		<header className='header'>
 			<div className='container'>
@@ -12,23 +26,51 @@ const Header = () => {
 				<nav className='navigation'>
 					<ul>
 						<li>
-							<a href='#discover'>DISCOVER</a>
+							<Link
+								to='discover'
+								containerId='scroll-container'
+								smooth={true}
+								duration={500}
+							>
+								{t('discover')}
+							</Link>
 						</li>
 						<li>
-							<a href='#contacts'>CONTACTS</a>
+							<Link
+								to='contacts'
+								containerId='scroll-container'
+								smooth={true}
+								duration={500}
+							>
+								{t('contacts')}
+							</Link>
 						</li>
 						<li>
-							<a href='#for-me'>FOR ME</a>
+							<Link
+								to='for-me'
+								containerId='scroll-container'
+								smooth={true}
+								duration={500}
+							>
+								{t('for_me')}
+							</Link>
 						</li>
 					</ul>
 				</nav>
 				<div className='icons'>
-					<a href='#globe'>
-						<img src={globeIcon} alt='Globe icon' />
-					</a>
-					<a href='#language'>
-						<img src={languageIcon} alt='Language icon' />
-					</a>
+					<a href='#dark'>DARK</a>
+					<div className='language-dropdown'>
+						<div className='current-lang' onClick={toggleDropdown}>
+							{currentLang}
+						</div>
+						{dropdownVisible && (
+							<div className='dropdown'>
+								<div onClick={() => changeLanguage('en', 'EN')}>EN</div>
+								<div onClick={() => changeLanguage('ru', 'RU')}>RU</div>
+								<div onClick={() => changeLanguage('cs', 'CS')}>CS</div>
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
 		</header>

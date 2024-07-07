@@ -1,0 +1,89 @@
+.discover {
+	padding: 50px 0;
+}
+
+.container__discover {
+	max-width: 1450px;
+	margin: 50px auto;
+}
+
+.discover h2 {
+	text-align: left;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+.skills {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+	flex-wrap: wrap;
+}
+
+.skill {
+	text-align: center;
+	flex: 1;
+	max-width: 150px;
+}
+
+.skill img {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.skill p {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.more-detailss {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.more-detailss::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #ccc;
+	z-index: 0;
+}
+
+.more-detailss button {
+	background-color: #fff;
+	color: #000;
+	border: none;
+	width: 300px;
+	height: 44px;
+	font-size: 12px;
+	font-weight: 400;
+	cursor: pointer;
+	border-radius: 18px;
+	transition: background-color 0.3s ease;
+	z-index: 1;
+	position: relative;
+}
+
+.more-detailss button:hover {
+	background-color: #A7ABF6;
+}
+
+@media (max-width: 768px) {
+	.skills {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.skill {
+		max-width: none;
+		margin-bottom: 20px;
+	}
+}

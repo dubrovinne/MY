@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+	.discover h2 {
+		text-align: center !important;
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	.skills {
+		justify-content: center !important;
+		margin-bottom: 40px !important;
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 10px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.skill {
+		max-width: 45%;
+		flex: 0 0 45%;
+		margin: 10px 2.5%;
+	}
+
+	.more-detailss button {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 480px) {
+	.discover h2 {
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+
+	.skill img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.skill p {
+		font-size: 16px;
+	}
+
+	.more-detailss button {
+		height: 40px;
+		font-size: 10px;
+	}
+}

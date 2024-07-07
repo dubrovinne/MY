@@ -1,0 +1,70 @@
+.process {
+	padding: 50px 0;
+}
+
+.container__process {
+	max-width: 1450px;
+	margin: 50px auto;
+}
+
+.methodology {
+	color: #81e496;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.my-process {
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.phases {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.phase {
+	flex: 1 1 30%;
+	max-width: 30%;
+	margin-top: 50px;
+}
+
+.phase h3 {
+	color: #a7abf6;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.phase h4 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-top: 25px;
+}
+
+.phase p {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+	.phases {
+		flex-direction: column;
+	}
+
+	.phase {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	.methodology,
+	.my-process,
+	.phases {
+		text-align: center;
+	}
+}

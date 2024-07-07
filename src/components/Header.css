@@ -18,9 +18,11 @@ ul {
 
 .header {
 	padding: 10px 0;
+	user-select: none;
 }
 
 .logo {
+	color: #a7abf6;
 	font-size: 40px;
 	font-weight: 700;
 }
@@ -39,8 +41,70 @@ ul {
 	font-size: 20px;
 	font-weight: 400;
 	margin-left: 150px;
+	cursor: pointer;
+}
+
+.navigation a:hover {
+	color: #a7abf6;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
 }
 
 .icons a {
 	margin-left: 40px;
+	font-size: 20px;
+	font-weight: 400;
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+}
+
+.icons a:hover {
+	color: #a7abf6;
+}
+
+.language-dropdown {
+	position: relative;
+	display: inline-block;
+	margin-left: 60px;
+}
+
+.current-lang {
+  font-weight: 700;
+	background-color: #a7abf6;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	text-transform: uppercase;
+	color: #1b1b1b;
+}
+
+.dropdown div:hover {
+	background-color: #a7abf6 !important;
+	color: #000;
+}
+
+.dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 5px;
+	z-index: 1;
+	min-width: 60px;
+}
+
+.dropdown div {
+	padding: 5px 10px;
+	cursor: pointer;
+	color: #1b1b1b;
+}
+
+.dropdown div:hover {
+	background-color: #eee;
 }

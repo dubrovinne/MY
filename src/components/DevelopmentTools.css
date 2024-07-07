@@ -1,0 +1,47 @@
+.development-tools {
+	padding: 50px 0;
+}
+
+.container__tools {
+	max-width: 1450px;
+	margin: 50px auto;
+}
+
+.development-tools h2 {
+	text-align: left;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+
+.tools-grid {
+	display: flex;
+	justify-content: left;
+	gap: 20px;
+}
+
+.tool-item {
+	background-color: #e8e8ea;
+	color: #000;
+	text-align: center;
+	width: 240px;
+	height: 52px;
+	font-size: 20px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.tool-item:hover {
+	background-color: #a7abf6;
+	color: #000;
+}
+
+@media (max-width: 768px) {
+	.container__tools h2 {
+		text-align: center;
+	}
+}
